@@ -1,0 +1,23 @@
+{
+  "name": "Bitcoin Wallet",
+  "short_name": "BTC Wallet",
+  "description": "Gerencie suas carteiras Bitcoin com estilo retrô pixel-art",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#222222",
+  "background_color": "#111111",
+  "orientation": "portrait",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

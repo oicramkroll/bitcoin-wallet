@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+:root {
+  --bg-light: #f4f4f4;
+  --bg-dark: #121212;
+  --text-light: #222;
+  --text-dark: #eee;
+  --accent: #ff9900;
+  --font: 'Press Start 2P', monospace;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  image-rendering: pixelated;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: fade-in 1.5s steps(8) both;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+button, input {
+  font-family: var(--font);
+  padding: 8px;
+  margin: 4px;
+  border: 2px solid var(--accent);
+  background: none;
+  color: inherit;
+  image-rendering: pixelated;
+  box-shadow: 4px 4px 0 var(--accent);
+  transition: background-color 0.2s ease;
+}
+
+button:hover, input:focus {
+  background-color: var(--accent);
+  color: black;
+  outline: none;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  border: 2px solid var(--accent);
+  padding: 4px;
+  box-shadow: 3px 3px 0 var(--accent);
+  background-color: transparent;
+  color: inherit;
+  image-rendering: pixelated;
+}
+
+#splash {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--bg-dark);
+  color: var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  z-index: 1000;
+  image-rendering: pixelated;
+  animation: fade-out 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes fade-out {
+  to { opacity: 0; visibility: hidden; }
+}
+
+.toast {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: black;
+  padding: 8px 12px;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0 black;
+  font-family: var(--font);
+  z-index: 999;
+  animation: toast-fade 4s ease forwards;
+  image-rendering: pixelated;
+}
+
+@keyframes toast-fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
