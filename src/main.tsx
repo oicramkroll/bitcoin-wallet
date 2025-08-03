@@ -32,7 +32,7 @@ const Splash = () => {
 function RouteSound() {
   const location = useLocation();
   useEffect(() => {
-    const sound = new Audio('/sound/smw_coin.wav');
+    const sound = new Audio('/sound/smw_lava_bubble.wav');
     sound.play().catch(() => { });
   }, [location.pathname]);
   return null;
