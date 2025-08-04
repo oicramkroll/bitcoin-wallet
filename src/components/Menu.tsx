@@ -43,11 +43,9 @@ export default function Menu() {
     return (
         <nav style={styles.container}>
             <div style={styles.logoRow}>
-                <img src="/logo.png" alt="Logo" style={styles.logo} />
-                <button className="hamburger" onClick={toggleMenu}>☰</button>
-            </div>
+                <img src="/SimpleLogo.png" alt="Logo" style={styles.logo} />
 
-            <div
+  <div
                 className="menu-container"
                 style={{
                     ...styles.menu,
@@ -69,6 +67,11 @@ export default function Menu() {
                     Tema: {theme === 'light' ? 'Claro' : 'Escuro'}
                 </button>
             </div>
+
+                <button className="hamburger" onClick={toggleMenu}>☰</button>
+            </div>
+
+            
 
             <style>
                 {`
@@ -144,6 +147,8 @@ const styles = {
         width: '100%',
         backgroundColor: 'var(--accent)',
         fontFamily: 'var(--font)',
+        display: 'flex',
+        flexDirection: 'column' as const,
     },
     logoRow: {
         display: 'flex',
@@ -152,7 +157,7 @@ const styles = {
         padding: '8px 16px',
     },
     logo: {
-        height: 40,
+        width: 50,
         imageRendering: 'pixelated' as const,
     },
     hamburger: {
